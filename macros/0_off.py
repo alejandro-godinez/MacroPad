@@ -6,7 +6,7 @@
 
 
 app = {                      # REQUIRED dict, must be named 'app'
-    'name' : '',             # Application name
+    'name' : 'OFF',          # Application name (20 chars max)
     'macros' : [             # List of button macros...
         # COLOR    LABEL    KEY SEQUENCE
         # 1st row ----------

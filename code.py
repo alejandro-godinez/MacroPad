@@ -43,6 +43,7 @@ class App:
             rect.fill = 0xFFFFFF
         else: # empty app name indicates blank screen for which we dimm header
             rect.fill = 0x000000
+
         for i in range(12):
             if i < len(self.macros): # Key in use, set label + LED color
                 macropad.pixels[i] = self.macros[i][0]
@@ -50,6 +51,7 @@ class App:
             else:  # Key not in use, no label or LED
                 macropad.pixels[i] = 0
                 group[i].text = ''
+
         macropad.keyboard.release_all()
         macropad.consumer_control.release()
         macropad.mouse.release_all()
@@ -63,6 +65,7 @@ class App:
 macropad = MacroPad()
 macropad.display.auto_refresh = False
 macropad.pixels.auto_write = False
+macropad.pixels.brightness = 0.1
 
 # Set up displayio group with all the labels
 group = displayio.Group()
@@ -186,6 +189,9 @@ while True:
                         macropad.stop_tone()
                 elif 'play' in item:
                     macropad.play_file(item['play'])
+            elif isinstance(item, bool):
+                macropad.pixels.brightness = 0.0 if macropad.pixels.brightness > 0 else 0.1
+                macropad.pixels.show()
     else:
         # Release any still-pressed keys, consumer codes, mouse buttons
         # Keys and mouse buttons are individually released this way (rather

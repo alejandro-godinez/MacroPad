@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2021 Victor Toni - GitHub @vitoni
+#
+# SPDX-License-Identifier: MIT
+
+# MACROPAD Hotkeys example: blank screen for idle
+from adafruit_hid.keycode import Keycode # REQUIRED if using Keycode.* values
+
+
+app = {                      # REQUIRED dict, must be named 'app'
+    'name' : 'Notepad++',          # Application name (20 chars max)
+    'macros' : [             # List of button macros...
+        # COLOR    LABEL    KEY SEQUENCE
+        # 1st row ----------
+        (0x000040, 'Compare',   [Keycode.CONTROL, Keycode.ALT, 'c']),
+        (0x000000, '',          []),
+        (0x000040, 'Align',     [Keycode.CONTROL, Keycode.SHIFT, '=']),
+        # 2nd row ----------
+        (0x004000, 'UCase',          [Keycode.CONTROL, Keycode.SHIFT, 'u']),
+        (0x000000, '',          []),
+        (0x004000, 'LCase',          [Keycode.CONTROL, 'u']),
+        # 3rd row ----------
+        (0x000000, '',          []),
+        (0x000000, '',          []),
+        (0x000000, '',          []),
+        # 4th row ----------
+        (0x000000, '',          []),
+        (0x000000, '',          []),
+        (0x000000, '',          []),
+        # Encoder button ---
+        (0x000000, '',          [True]) #boolean = use as light toggle
+    ]
+}
