@@ -65,7 +65,7 @@ class App:
 macropad = MacroPad()
 macropad.display.auto_refresh = False
 macropad.pixels.auto_write = False
-macropad.pixels.brightness = 0.1
+macropad.pixels.brightness = 0.2
 
 # Set up displayio group with all the labels
 group = displayio.Group()
@@ -190,7 +190,10 @@ while True:
                 elif 'play' in item:
                     macropad.play_file(item['play'])
             elif isinstance(item, bool):
-                macropad.pixels.brightness = 0.0 if macropad.pixels.brightness > 0 else 0.1
+                if (macropad.pixels.brightness + 0.5) > 1.0:
+                    macropad.pixels.brightness = 0.0
+                else:
+                    macropad.pixels.brightness += 0.5
                 macropad.pixels.show()
     else:
         # Release any still-pressed keys, consumer codes, mouse buttons
