@@ -190,10 +190,10 @@ while True:
                 elif 'play' in item:
                     macropad.play_file(item['play'])
             elif isinstance(item, bool):
-                if (macropad.pixels.brightness + 0.5) > 1.0:
+                if (macropad.pixels.brightness + 0.2) > 1.0:
                     macropad.pixels.brightness = 0.0
                 else:
-                    macropad.pixels.brightness += 0.5
+                    macropad.pixels.brightness += 0.2
                 macropad.pixels.show()
     else:
         # Release any still-pressed keys, consumer codes, mouse buttons
