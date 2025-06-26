@@ -1,0 +1,11 @@
+Microsoft SQL Server Management Studio
+Page: Microsoft SQL SMS
+
+Refresh Local Cache           CTRL + SHIFT + R
+Uppercase                     CTRL + SHIFT + U
+Lowercase                     CTRL + SHIFT + L
+View Whitespace CTL + R,      CTRL + W
+Window.MovetoPreviousTabGroup CTRL + K, P
+Window.NewVerticalTabGroup    CTRL + K, V
+Window.MovetoNextTabGroup     CTRL + K, N
+Window.PinTab                 CTRL + P, CTRL + P

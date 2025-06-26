@@ -1,0 +1,48 @@
+Settings -> Shortcut Mapper
+
+Page: Notepad++
+--- ROW 1 ---
+  Compare
+    CTRL + ALT + C
+  Code Align
+    CTRL + SHIP + =
+    
+--- ROW 2 ---
+  Upercase
+    CTRL + SHIFT + U
+  Lowercase
+    CTRL + U
+    
+--- ROW 3 ---
+
+  
+--- ROW 4 ---  
+  
+  
+  
+--------------------------
+NOT YET ADDED
+--------------------------
+Clear Compare
+  CTRL + ALT + X
+    
+Open Containing folder
+  CTRL + SHIFT + E
+    
+Synchronize Vertical Scrolling
+  CTRL + SHIFT + V
+
+Fold All
+  ALT + 0
+  
+Unfold All
+  ALT + SHIFT + 0
+
+Move To Other View
+  CTRL + ALT + SHIFT + V
+  
+Show Space and Tab
+  CTRL + ALT + SHIFT + TAB
+  
+JSFormat
+  CTRL + ALT + M

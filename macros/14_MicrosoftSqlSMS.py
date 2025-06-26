@@ -1,10 +1,4 @@
-# SPDX-FileCopyrightText: 2021 Victor Toni - GitHub @vitoni
-#
-# SPDX-License-Identifier: MIT
-
-# MACROPAD Hotkeys example: blank screen for idle
 from adafruit_hid.keycode import Keycode # REQUIRED if using Keycode.* values
-
 
 app = {                      # REQUIRED dict, must be named 'app'
     'name' : 'Microsoft SQL SMS',          # Application name (20 chars max)
@@ -15,18 +9,18 @@ app = {                      # REQUIRED dict, must be named 'app'
         (0x400040, 'Move Tab V', [Keycode.CONTROL, 'k', 'v']),
         (0x400040, '>',          [Keycode.CONTROL, 'k', 'n']),
         # 2nd row ----------
-        (0x000000, '',          []),
-        (0x400000, 'Pin',   [Keycode.CONTROL, 'p', Keycode.CONTROL, 'p']),
-        (0x000000, '',          []),
+        (0x000000, '',           []),
+        (0x400000, 'Pin',        [Keycode.CONTROL, 'p', Keycode.CONTROL, 'p']),
+        (0x000000, '',           []),
         # 3rd row ----------
-        (0x004000, 'UCase',          [Keycode.CONTROL, Keycode.SHIFT, 'u']),
-        (0x004000, 'LCase',          [Keycode.CONTROL, 'u']),
-        (0xF0F0F0, 'WSpace',         [Keycode.CONTROL, 'r', Keycode.CONTROL, 'w']),
+        (0x004000, 'UCase',      [Keycode.CONTROL, Keycode.SHIFT, 'u']),
+        (0x004000, 'LCase',      [Keycode.CONTROL, 'u']),
+        (0xF0F0F0, 'WSpace',     [Keycode.CONTROL, 'r', Keycode.CONTROL, 'w']),
         # 4th row ----------
-        (0x000000, '',          []),
+        (0x000000, '',               []),
         (0x000040, 'Refresh Cache',  [Keycode.CONTROL, Keycode.SHIFT, 'r']),
-        (0x000000, '',          []),
+        (0x000000, '',               []),
         # Encoder button ---
-        (0x000000, '',          [True]) #boolean = use as light toggle
+        (0x000000, '',               [True]) #boolean = use as light toggle
     ]
 }

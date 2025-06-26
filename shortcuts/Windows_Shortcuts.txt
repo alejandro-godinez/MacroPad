@@ -1,0 +1,3 @@
+Page: Windows
+
+On Screen Keyboard             WIN + CTRL + O

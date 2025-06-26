@@ -1,0 +1,23 @@
+Page: Visual Studio
+
+Window.MovetoPreviousTabGroup            CTRL + K, P
+Window.NewVerticalTabGroup               CTRL + K, V
+Window.MovetoNextTabGroup                CTRL + K, N
+Window.PinTab                            CTRL + P, CTRL + P
+Window.Dock                              CTRL + [, D
+Window.Float                             CTRL + [, L
+Window.MoveToMainDocumentGroup           CTRL + [, M
+
+OtherContextMenus.EasyMDIDocumentWindow.Float   CTRL + ], L
+
+File.OpenContainingFolder                CTRL + [, F
+SolutionExplorer.SyncWithActiveDocument  CTRL + [, S                  //Goto File in Solution Explorer
+View.BookmarkWindow                      CTRL + K, CTRL + W
+Edit.ToggleBookmark                      CTRL + K, CTRL + K
+Copilot.ToggleCompletions                CTRL + K, CTRL + SHIFT + C
+Copilot.ToggleNES                        CTRL + K, CTRL + SHIFT + N   //Next Edit Suggestion
+Ask.Copilot                              ALT + /
+View.GitHub.Copilot.Chat                 CTRL + \, CTRL + C
+
+TestExplorer.ShowTestExplorer            CTRL + E, T
+TestExplorer.RunAllTests                 CTRL + R, A

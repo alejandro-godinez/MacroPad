@@ -1,9 +1,4 @@
-# SPDX-FileCopyrightText: 2021 Victor Toni - GitHub @vitoni
-#
-# SPDX-License-Identifier: MIT
-
-# MACROPAD Hotkeys example: blank screen for idle
-
+# MACROPAD Hotkeys: blank screen for idle with off indicator
 
 app = {                      # REQUIRED dict, must be named 'app'
     'name' : 'OFF',          # Application name (20 chars max)

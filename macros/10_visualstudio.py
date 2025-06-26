@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2021 Victor Toni - GitHub @vitoni
-#
-# SPDX-License-Identifier: MIT
-
-# MACROPAD Hotkeys example: blank screen for idle
-
 from adafruit_hid.keycode import Keycode # REQUIRED if using Keycode.* values
 
 app = {                      # REQUIRED dict, must be named 'app'

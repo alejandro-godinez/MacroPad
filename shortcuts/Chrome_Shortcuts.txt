@@ -1,0 +1,7 @@
+Page: Chrome
+
+Toogle Bookmark Toolbar  CTRL + SHIFT + B
+Bookmark Magers          CTRL + SHIFT + O
+Inspect It               CTRL + SHIFT + C
+Downloads                CTRL + J
+    
