@@ -1,0 +1,7 @@
+Page: Delphi7
+
+
+Grep Search           SHIFT + ALT + S
+Run                   F9
+Units                 CTRL + F12
+Forms                 SHIFT + F12

@@ -7,8 +7,11 @@ Window.PinTab                            CTRL + P, CTRL + P
 Window.Dock                              CTRL + [, D
 Window.Float                             CTRL + [, L
 Window.MoveToMainDocumentGroup           CTRL + [, M
+Window.Close                             CTRL + ESC
 
-OtherContextMenus.EasyMDIDocumentWindow.Float   CTRL + ], L
+OtherContextMenus.EasyMDIDocumentWindow.Float         CTRL + ], L
+OtherContextMenus.WorkspaceContextMenu.Add.NewFolder  CTRL + [, CTRL + N
+OtherContextMenus.BookmarkWindow.Rename               CTRL + [, CTRL + R
 
 File.OpenContainingFolder                CTRL + [, F
 SolutionExplorer.SyncWithActiveDocument  CTRL + [, S                  //Goto File in Solution Explorer
@@ -21,3 +24,6 @@ View.GitHub.Copilot.Chat                 CTRL + \, CTRL + C
 
 TestExplorer.ShowTestExplorer            CTRL + E, T
 TestExplorer.RunAllTests                 CTRL + R, A
+
+EditorContextMenus.CodeWindow.RemoveAndSort  CTRL + R, CTRL + G
+Edit.SortUsings                              CTRL + R, CTRL + S
