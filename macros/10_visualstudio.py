@@ -14,8 +14,13 @@ app = {                      # REQUIRED dict, must be named 'app'
         (0x8B5A00, 'Sltn',       [Keycode.CONTROL, '[', 's']),
         # 3rd row ----------
         (0x000060, 'Win',        [Keycode.CONTROL, 'k', Keycode.CONTROL, 'w']),
-        (0x000060, 'Bmark',      [Keycode.CONTROL, 'k', Keycode.CONTROL, 'k']),
-        (0x000000, '',           []),
+        (0x000060, '[Bmark]',    [Keycode.CONTROL, 'k', Keycode.CONTROL, 'k']),
+        (0x000060, 'Auto',       [Keycode.CONTROL, 'c',                             #copy 
+                                  Keycode.CONTROL, 'k', Keycode.CONTROL, 'k',       #bookmark
+                                  Keycode.CONTROL, 'k', Keycode.CONTROL, 'w',       #bmark window
+                                  Keycode.F2,                                       #rename
+                                  Keycode.CONTROL, 'v',                             #past
+                                  Keycode.ENTER]),                                  #enter
         # 4th row ----------
         (0x006000, 'Dock',       [Keycode.CONTROL, '[', 'd']),
         (0x006000, 'Float',      [Keycode.CONTROL, '[', 'l']),
