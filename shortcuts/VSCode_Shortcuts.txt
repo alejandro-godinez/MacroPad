@@ -1,0 +1,3 @@
+Page: VS Code
+
+View: Pin Editor                            CTRL + K, SHIFT + ENTER
