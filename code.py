@@ -162,6 +162,7 @@ while True:
             macropad.pixels.show()
         elif key_number == 12 and apps[app_index].name == "OFF" : # encoder button when in off screen
             pin_lock.check_pin(macropad)
+            apps[app_index].switch()
             macropad.display.root_group = group
             macropad.display.refresh()
             continue
