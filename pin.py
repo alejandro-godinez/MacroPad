@@ -10,7 +10,7 @@ from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 
 # A 6-digit PIN code to unlock the device.
-PIN_CODE = "12345"
+PIN_CODE = "123456"
 
 def check_pin(macropad):
     """
@@ -112,7 +112,8 @@ def check_pin(macropad):
 
                 key_value = current_key_mapping[event.key_number]
 
-                if key_value.isdigit() and len(entered_pin) < 6:
+                if key_value.isdigit() and len(entered_pin) <= 6:
+                    print("Key: ", key_value)
                     entered_pin += key_value
                     pin_text_label.text = "*" * len(entered_pin)
                 elif key_value == 'C':
