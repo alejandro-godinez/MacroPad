@@ -3,10 +3,9 @@
 # SPDX-License-Identifier: MIT
 
 """
-A macro/hotkey program for Adafruit MACROPAD. Macro setups are stored in the
-/macros folder (configurable below), load up just the ones you're likely to
-use. Plug into computer's USB port, use dial to select an application macro
-set, press MACROPAD keys to send key sequences and other USB protocols.
+A macro/hotkey program for Adafruit MACROPAD. This version adds a 6-digit
+PIN code lock on startup. The device will not be functional until the correct
+code is entered.
 """
 
 # pylint: disable=import-error, unused-import, too-few-public-methods
@@ -18,12 +17,12 @@ import terminalio
 from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 from adafruit_macropad import MacroPad
-
+from adafruit_hid.keycode import Keycode
+import pin as pin_lock
 
 # CONFIGURABLES ------------------------
 
 MACRO_FOLDER = '/macros'
-
 
 # CLASSES AND FUNCTIONS ----------------
 
@@ -38,7 +37,7 @@ class App:
     def switch(self):
         """ Activate application settings; update OLED labels and LED
             colors. """
-        group[13].text = self.name   # Application name
+        group[13].text = self.name  # Application name
         if self.name:
             rect.fill = 0xFFFFFF
         else: # empty app name indicates blank screen for which we dimm header
@@ -67,22 +66,27 @@ macropad.display.auto_refresh = False
 macropad.pixels.auto_write = False
 macropad.pixels.brightness = 0.2
 
-# Set up displayio group with all the labels
+# PIN CODE LOGIC -----------------------
+# Check PIN code before proceeding to the main application
+pin_lock.check_pin(macropad)
+
+# Set up displayio group with all the labels for the main app UI
 group = displayio.Group()
 for key_index in range(12):
     x = key_index % 3
     y = key_index // 3
     group.append(label.Label(terminalio.FONT, text='', color=0xFFFFFF,
-                             anchored_position=((macropad.display.width - 1) * x / 2,
-                                                macropad.display.height - 1 -
-                                                (3 - y) * 12),
-                             anchor_point=(x / 2, 1.0)))
+                              anchored_position=((macropad.display.width - 1) * x / 2,
+                                                 macropad.display.height - 1 -
+                                                 (3 - y) * 12),
+                              anchor_point=(x / 2, 1.0)))
 rect = Rect(0, 0, macropad.display.width, 13, fill=0xFFFFFF)
 group.append(rect)
 group.append(label.Label(terminalio.FONT, text='', color=0x000000,
-                         anchored_position=(macropad.display.width//2, 0),
-                         anchor_point=(0.5, 0.0)))
+                          anchored_position=(macropad.display.width//2, 0),
+                          anchor_point=(0.5, 0.0)))
 macropad.display.root_group = group
+macropad.display.refresh()
 
 # Load all the macro key setups from .py files in MACRO_FOLDER
 apps = []
@@ -179,8 +183,8 @@ while True:
                     else:
                         macropad.mouse.release(-item['buttons'])
                 macropad.mouse.move(item['x'] if 'x' in item else 0,
-                                    item['y'] if 'y' in item else 0,
-                                    item['wheel'] if 'wheel' in item else 0)
+                                     item['y'] if 'y' in item else 0,
+                                     item['wheel'] if 'wheel' in item else 0)
                 if 'tone' in item:
                     if item['tone'] > 0:
                         macropad.stop_tone()
