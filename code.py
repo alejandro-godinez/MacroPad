@@ -156,9 +156,16 @@ while True:
         # String (e.g. "Foo"): corresponding keys pressed & released
         # List []: one or more Consumer Control codes (can also do float delay)
         # Dict {}: mouse buttons/motion (might extend in future)
+        print("Key: ", key_number)
         if key_number < 12: # No pixel for encoder button
             macropad.pixels[key_number] = 0xFFFFFF
             macropad.pixels.show()
+        elif key_number == 12 and apps[app_index].name == "OFF" : # encoder button when in off screen
+            pin_lock.check_pin(macropad)
+            macropad.display.root_group = group
+            macropad.display.refresh()
+            continue
+
         for item in sequence:
             if isinstance(item, int):
                 if item >= 0:
