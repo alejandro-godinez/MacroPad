@@ -9,9 +9,9 @@ app = {                      # REQUIRED dict, must be named 'app'
         (0x400040, 'Move Tab V', [Keycode.CONTROL, 'k', 'v']),
         (0x400040, '>',          [Keycode.CONTROL, 'k', 'n']),
         # 2nd row ----------
-        (0x000000, '',           []),
-        (0x400000, 'Pin',        [Keycode.CONTROL, 'p', Keycode.CONTROL, 'p']),
-        (0x000000, '',           []),
+        (0x000000, 'Pin',        [Keycode.CONTROL, 'p', Keycode.CONTROL, 'p']),
+        (0x400000, 'SnipM',      [Keycode.CONTROL, 'K', Keycode.CONTROL, 'X']),
+        (0x000000, 'Snip+',      [Keycode.CONTROL, 'K', Keycode.CONTROL, 'B']),
         # 3rd row ----------
         (0x004000, 'UCase',      [Keycode.CONTROL, Keycode.SHIFT, 'u']),
         (0x004000, 'LCase',      [Keycode.CONTROL, 'u']),
