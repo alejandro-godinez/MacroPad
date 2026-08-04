@@ -17,27 +17,29 @@
 # This example ONLY shows tones (and delays), but really they can be mixed
 # with other elements (keys, codes, mouse) to provide auditory feedback.
 
-app = {               # REQUIRED dict, must be named 'app'
-    'name' : 'Tones', # Application name
-    'macros' : [      # List of button macros...
-        # COLOR    LABEL    KEY SEQUENCE
-        # 1st row ----------
-        (0x200000, 'C3', [{'tone':131}]),
-        (0x202000, 'C4', [{'tone':262}]),
-        (0x002000, 'C5', [{'tone':523}]),
-        # 2nd row ----------
-        (0x000020, 'Rising', [{'tone':131}, 0.2, {'tone':262}, 0.2, {'tone':523}]),
-        (0x000000, '', []),
-        (0x000020, 'Falling', [{'tone':523}, 0.2, {'tone':262}, 0.2, {'tone':131}]),
-        # 3rd row ----------
-        (0x000000, '', []),
-        (0x000000, '', []),
-        (0x000000, '', []),
-        # 4th row ----------
-        (0x000000, '', []),
-        (0x000000, '', []),
-        (0x000000, '', []),
-        # Encoder button ---
-        (0x000000, '', [])
-    ]
+from constants import PixelColor
+
+app = {              # REQUIRED dict, must be named 'app'
+  'name' : 'Tones',  # Application name
+  'macros' : [       # List of button macros...
+    # COLOR    LABEL    KEY SEQUENCE
+    # 1st row ----------
+    (PixelColor.DEEP_RED, 'C3', [{'tone':131}]),
+    (PixelColor.OLIVE,    'C4', [{'tone':262}]),
+    (PixelColor.LIME,     'C5', [{'tone':523}]),
+    # 2nd row ----------
+    (PixelColor.DEEP_BLUE_ALT, 'Rising',  [{'tone':131}, 0.2, {'tone':262}, 0.2, {'tone':523}]),
+    (PixelColor.BLACK,         '',        []),
+    (PixelColor.DEEP_BLUE_ALT, 'Falling', [{'tone':523}, 0.2, {'tone':262}, 0.2, {'tone':131}]),
+    # 3rd row ----------
+    (PixelColor.BLACK, '', []),
+    (PixelColor.BLACK, '', []),
+    (PixelColor.BLACK, '', []),
+    # 4th row ----------
+    (PixelColor.BLACK, '', []),
+    (PixelColor.BLACK, '', []),
+    (PixelColor.BLACK, '', []),
+    # Encoder button ---
+    (PixelColor.BLACK, '', [])
+ ]
 }
