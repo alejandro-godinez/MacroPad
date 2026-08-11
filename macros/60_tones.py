@@ -24,22 +24,22 @@ app = {              # REQUIRED dict, must be named 'app'
   'macros' : [       # List of button macros...
     # COLOR    LABEL    KEY SEQUENCE
     # 1st row ----------
-    (PixelColor.DEEP_RED, 'C3', [{'tone':131}]),
-    (PixelColor.OLIVE,    'C4', [{'tone':262}]),
-    (PixelColor.LIME,     'C5', [{'tone':523}]),
+    (PixelColor.WHITE, 'Do',  [{'tone':262}, 0.1]),
+    (PixelColor.RED,   'Re',  [{'tone':294}, 0.1]),
+    (PixelColor.ORANGE,'Mi',  [{'tone':330}, 0.1]),
     # 2nd row ----------
-    (PixelColor.DEEP_BLUE_ALT, 'Rising',  [{'tone':131}, 0.2, {'tone':262}, 0.2, {'tone':523}]),
-    (PixelColor.BLACK,         '',        []),
-    (PixelColor.DEEP_BLUE_ALT, 'Falling', [{'tone':523}, 0.2, {'tone':262}, 0.2, {'tone':131}]),
+    (PixelColor.YELLOW,'Fa', [{'tone':349}, 0.1]),
+    (PixelColor.GREEN, 'So', [{'tone':392}, 0.1]),
+    (PixelColor.CYAN,  'La', [{'tone':440}, 0.1]),
     # 3rd row ----------
-    (PixelColor.BLACK, '', []),
-    (PixelColor.BLACK, '', []),
+    (PixelColor.BLUE,    'Si', [{'tone':493}, 0.1]),
+    (PixelColor.MAGENTA, 'Do', [{'tone':523}, 0.1]),
     (PixelColor.BLACK, '', []),
     # 4th row ----------
-    (PixelColor.BLACK, '', []),
-    (PixelColor.BLACK, '', []),
-    (PixelColor.BLACK, '', []),
+    (PixelColor.BLACK, '', [{'tone':262}, 0.25, {'tone':294}, 0.25, {'tone':330}, 0.25, {'tone':392}, 1.0, {'tone':523}, 0.25]),  # la cu ca ra ch
+    (PixelColor.BLACK, '[Cucaracha]', []),
+    (PixelColor.BLACK, '', [{'tone':330}, 0.25, {'tone':392}, 0.25, {'tone':440}, 0.25, {'tone':392}, 0.25, {'tone':349}, 0.25, {'tone':330}, 0.25, {'tone':294}, 0.25]),  # ya no pue de ca mi nar
     # Encoder button ---
-    (PixelColor.BLACK, '', [])
+    (PixelColor.BLACK, '', [True]) #boolean = use as light toggle
  ]
 }

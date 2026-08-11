@@ -10,9 +10,9 @@ app = {                    # REQUIRED dict, must be named 'app'
     (PixelColor.BLACK,       '',    []),
     (PixelColor.BLACK,       '',    []),
     # 2nd row ----------
-    (PixelColor.BLACK,    'Grep',  [Keycode.SHIFT, Keycode.ALT, 'S']),
-    (PixelColor.DARK_RED, 'Units', [Keycode.CONTROL, Keycode.F12]),
-    (PixelColor.BLACK,    'Forms', [Keycode.SHIFT, Keycode.F12]),
+    (PixelColor.BLUE,      'Grep',  [Keycode.SHIFT, Keycode.ALT, 'S']),
+    (PixelColor.DARK_RED,  'Units', [Keycode.CONTROL, Keycode.F12]),
+    (PixelColor.YELLOW,    'Forms', [Keycode.SHIFT, Keycode.F12]),
     # 3rd row ----------
     (PixelColor.BLACK, '', []),
     (PixelColor.BLACK, '', []),
