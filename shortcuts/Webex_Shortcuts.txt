@@ -1,0 +1,17 @@
+Page: Webex
+
+Meeting & Calls
+  Answer Call                           CTRL + SHIFT + C
+  Leave/End meeting call                CTRL + L
+  Decline Call                          CTRL + D
+  
+  Mute/Unmute yourself                  CTRL + M
+  Start/Stop Video on a call            CTRL + SHIFT + V
+  Open/Close Chat Pane                  CTRL + E
+  
+  Share content                         CTRL + SHIFT + D
+  Stop Sharing                          CTRL + SHIFT + Z
+  Show/Hide video view while sharing    CTRL + ALT + P
+  
+  Start Annotation                      ALT + SHIFT + Z
+  Stop Annotation                       ALT + SHIFT + X

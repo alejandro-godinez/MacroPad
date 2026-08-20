@@ -11,5 +11,5 @@ Window.NewVerticalTabGroup    CTRL + K, V
 Window.MovetoNextTabGroup     CTRL + K, N
 Window.PinTab                 CTRL + P, CTRL + P
 
-Edit.InsertSnippet            CTRL + K, CTRL + X
+Edit.InsertSnippet            CTRL + SHIFT + K, CTRL + SHIFT + X
 Tools.CodeSnippetsManager     CTRL + K, CTRL + B

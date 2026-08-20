@@ -1,0 +1,24 @@
+Page: Visual Studio
+
+Window.MovetoPreviousTabGroup                CTRL + K, P
+Window.NewVerticalTabGroup                   CTRL + K, V
+Window.MovetoNextTabGroup                    CTRL + K, N
+Window.PinTab                                CTRL + P, CTRL + P
+Window.Dock                                  CTRL + [, D
+Window.Float                                 CTRL + [, L
+Window.MoveToMainDocumentGroup               CTRL + [, M
+Window.CloseAllButPinned                     CTRL + [, X
+
+View.BookmarkWindow                          CTRL + K, CTRL + W
+Copilot.ToggleCompletions                    CTRL + K, CTRL + SHIFT + C
+Copilot.ToggleNES                            CTRL + K, CTRL + SHIFT + N   //Next Edit Suggestion
+
+SolutionExplorer.SyncWithActiveDocument      CTRL + [, S                  //Goto File in Solution Explorer
+File.OpeninFileExplorer                      CTRL + [, F
+
+EditorContextMenus.CodeWindow.RemoveAndSort  CTRL + R, G
+Edit.SortUsings                              CTRL + R, CTRL + S
+Edit.ConvertSpacesToTabs                     CTRL + R, ALT + T
+Edit.ConvertTabsToSpaces                     CTRL + R, ALT + S
+Edit.FormatDocument                          CTRL + K, CTRL + D
+Edit.FormatSelection                         CTRL + K, CTRL + F
